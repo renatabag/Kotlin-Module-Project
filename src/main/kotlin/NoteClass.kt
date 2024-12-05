@@ -2,6 +2,9 @@ class Note(val title: String, val content: String) {
     init {
         require(title.isNotBlank()) { "Название заметки не может быть пустым." }
     }
+    init {
+        require(content.isNotBlank()) { "Содержимое заметки не может быть пустым." }
+    }
 }
 class NoteManager {
     val archives = mutableListOf<Archive>()
